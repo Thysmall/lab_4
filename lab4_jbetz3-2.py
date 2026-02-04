@@ -5,3 +5,7 @@ Description: Guess the number game where as you guess incorrect your wife builds
 Date: 2/4/26
 Credits: ASCII art from: https://www.asciiart.eu/art/5e3d4e6de976abac
 """
+
+import random
+
+number: int = random.randint(1,15)
