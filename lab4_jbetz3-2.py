@@ -10,6 +10,9 @@ import random
 
 number: int = random.randint(1,15)
 stage: int = 0
+names: list[str] = ["Jimmy", "Timmy", "Jacob", "Tobias", "Gerard", "Nathan", "Steve", "Lucy", "Carmen", "Stacy", "Alex", "Jenny"]
+kid_1: str = names.pop(random.randint(0,len(names)))
+kid_2: str = names.pop(random.randint(0,len(names)))
 art: list[str] = [
     """
     
@@ -47,7 +50,8 @@ art: list[str] = [
     (   _    _ _\\
     =`-(_)--(_)-' 
     """,
-    """
+    f"""
+    {kid_1} & {kid_2}
          \\O/   
       \\o/ | \\o/
        |  |  |
@@ -68,10 +72,10 @@ while playing:
             playing = False
             break
         if guess < number:
-            print("Thats not it. (Timmy says its higher)")
+            print(f"Thats not it. ({kid_1} says its higher)")
             print(art[stage])
         if guess > number:
-            print("Thats not it. (Jimmy says its lower)")
+            print(f"Thats not it. ({kid_2} says its lower)")
             print(art[stage])
         stage += 1
         if stage > 5:
