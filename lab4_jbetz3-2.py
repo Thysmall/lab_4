@@ -9,6 +9,7 @@ Credits: ASCII art from: https://www.asciiart.eu/art/5e3d4e6de976abac
 import random
 
 number: int = random.randint(1,15)
+stage: int = -1
 art: list[str] = [
     """
     
@@ -47,3 +48,11 @@ art: list[str] = [
     =`-(_)--(_)-' 
     """    
 ]
+
+print("Welcome to Guess the Number, Keep the Kids! Your wife is on her way out, but you want to keep your kids. She said if you can guess the right number, one through fifteen, you can keep them. Otherwise, they are gone.")
+
+playing: bool = True
+while playing:
+    guess: int = int(input("Enter your guess: "))
+    
+    
