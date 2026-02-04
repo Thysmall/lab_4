@@ -49,10 +49,15 @@ art: list[str] = [
     """    
 ]
 
-print("Welcome to Guess the Number, Keep the Kids! Your wife is on her way out, but you want to keep your kids. She said if you can guess the right number, one through fifteen, you can keep them. Otherwise, they are gone.")
+print("Welcome to Guess the Number, Keep the Kids! Your wife is on her way out, but you want to keep your kids and they want to stay with you. She said if you can guess the right number, one through fifteen, you can keep them. Otherwise, they are gone.")
 
 playing: bool = True
 while playing:
-    guess: int = int(input("Enter your guess: "))
+    try:
+        guess: int = int(input("Enter your guess: "))
+        
+        playing = False
+    except:
+        if ValueError: print("You must guess an integer.")      
     
     
