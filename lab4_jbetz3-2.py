@@ -11,8 +11,8 @@ import random
 number: int = random.randint(1,15)
 stage: int = 0
 names: list[str] = ["Jimmy", "Timmy", "Jacob", "Tobias", "Gerard", "Nathan", "Steve", "Lucy", "Carmen", "Stacy", "Alex", "Jenny"]
-kid_1: str = names.pop(random.randint(0,len(names)))
-kid_2: str = names.pop(random.randint(0,len(names)))
+kid_1: str = names.pop(random.randint(0,len(names)-1))
+kid_2: str = names.pop(random.randint(0,len(names)-1))
 art: list[str] = [
     """
     
@@ -44,7 +44,8 @@ art: list[str] = [
     (   _    _ _\\
     =`-(_)--(_)-' 
     """,  
-    """
+    f"""
+    {kid_1} & {kid_2}
       ______
      /|o||0\\`.__
     (   _    _ _\\
